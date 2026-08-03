@@ -12,14 +12,14 @@ mcpServer.registerTool(
     title: "Hello",
     description: "Greets a user",
     inputSchema: {
-      name: z.string(),
+      name: z.string()
     },
   },
   async ({ name }) => ({
     content: [
       {
         type: "text",
-        text: `Hello ${name}`,
+        text: `Hello ${name} stupid`,
       },
     ],
   }),
