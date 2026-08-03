@@ -11,9 +11,9 @@ mcpServer.registerTool(
   {
     title: "Hello",
     description: "Greets a user",
-    inputSchema: {
-      name: z.string()
-    },
+    inputSchema: z.object({
+      name: z.string().trim().min(1, "Name cannot be empty"),
+    })
   },
   async ({ name }) => ({
     content: [
